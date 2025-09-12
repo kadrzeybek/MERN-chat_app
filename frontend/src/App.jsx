@@ -2,13 +2,15 @@ import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage'
 import SignupPage from './pages/SignupPage'
 import LoginPage from './pages/LoginPage'
-import ProfilePage from './pages/ProfilePage'
+import ProfilePage from './pages/profilePage'
 import Settings from './pages/Settings'
 import { Route, Routes, Navigate } from 'react-router-dom'
 import './App.css'
 import { useAuthStore } from './store/userAuthStore'
 import { useEffect } from 'react'
 import {Loader} from 'lucide-react'
+
+import { Toaster } from 'react-hot-toast'
 
 
 const App = () => {
@@ -39,6 +41,8 @@ const App = () => {
        {/* Not found page */}
         <Route path="*" element={<h1>404 Not Found!</h1>} />
       </Routes>
+      <Toaster />
+
     </div>
   )
 }
