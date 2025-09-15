@@ -3,7 +3,7 @@
 import Navbar from "./components/Navbar";
 
 import HomePage from "./pages/HomePage";
-import ProfilePage from "./pages/ProfilePage";
+import ProfilePage from "./pages/ProfilePage.jsx";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
 import SettingsPage from "./pages/SettingsPage";
