@@ -16,7 +16,6 @@ dotenv.config();
 
 
 const PORT = process.env.PORT || 5001
-
 const __dirname = path.resolve();
 
 app.use(express.json());
@@ -30,7 +29,7 @@ app.use(cors({
 app.use("/api/auth", authRoutes)
 app.use("/api/messages", messageRoutes);
 
-if(process.env.NODE_ENV ==="prodcution"){
+if(process.env.NODE_ENV ==="production"){
     app.use(express.static(path.join(__dirname,"../frontend/dist")))
     
     app.get("*",(req,res) =>{
