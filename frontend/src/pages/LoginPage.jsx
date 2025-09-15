@@ -28,8 +28,8 @@ const LoginPage = () => {
           {/* Logo */}
           <div className="text-center mb-8">
             <div className="flex flex-col items-center gap-2 group">
-              <div className="size-12 rounded-xl bg-primary flex items-center justify-center transition-all hover:opacity-80">
-                <MessageSquare className='size-6 ' />
+              <div className="size-12 rounded-xl bg-primary/10 flex items-center justify-center transition-all hover:opacity-80">
+                <MessageSquare className='size-6 text-primary ' />
               </div>
               <h1 className="text-2xl font-bold mt-2">Welcome Back</h1>
               <p className="text-base-content">Sign in to your account</p>
@@ -42,7 +42,7 @@ const LoginPage = () => {
                 <span className="label-text font-medium">E-Mail</span>
               </label>
               <label className="input input-bordered flex items-center gap-2 w-full">
-                <Mail className="size-5 text-gray-400" />
+                <Mail className="size-5 text-base-content/40" />
                 <input
                   type="text"
                   className="grow"
@@ -59,7 +59,7 @@ const LoginPage = () => {
                   <span className="label-text font-medium">Password</span>
                 </label>
                 <label className="input input-bordered flex items-center gap-2 w-full">
-                  <Lock className="size-5 text-gray-400" />
+                  <Lock className="size-5 text-base-content/40" />
                   <input
                     type={showPassword ? 'text' : 'password'}
                     className="grow"
@@ -71,9 +71,9 @@ const LoginPage = () => {
                   />
                   <button className='items-center' type='button' onClick={() => setShowPassword(!showPassword)}>
                     {showPassword ? (
-                      <EyeOff className="size-5 text-gray-400"/>
+                      <EyeOff className="size-5 text-base-content/40"/>
                     ) : (
-                      <Eye className="size-5 text-gray-400" />
+                      <Eye className="size-5 text-base-content/40" />
                     )}
                   </button>
                 </label>
