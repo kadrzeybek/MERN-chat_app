@@ -32,7 +32,7 @@ app.use("/api/messages", messageRoutes);
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "../frontend/dist")));
   
-    // Express 5 uyumlu SPA fallback
+    // Express 5 compatible SPA fallback
     app.get(/.*/, (req, res) => {
       res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
     });
